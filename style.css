@@ -31,6 +31,9 @@ body {
   top: 10px;
   height: 50px;
   border-radius: 5px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 .button-container {
@@ -68,7 +71,8 @@ body {
   width: 30%;
 }
 
-.math-button {
+.operator,
+#result {
   width: 60px;
   height: 38px;
   margin: 5px 15px;
@@ -87,12 +91,12 @@ body {
   border: solid 2px orange;
 }
 
-.math-button:hover {
+.operator:hover {
   background: beige;
   cursor: pointer;
 }
 
-.math-button:active {
+.operator:active {
   border: 3px inset silver;
   box-shadow: inset -1px -1px 16px 2px rgba(235, 235, 190, 1);
 }

@@ -16,8 +16,6 @@ numberBtn.forEach((btn) => {
       secondNumber += btn.value;
       screen.innerHTML = secondNumber;
     }
-    console.log("Pierwszy: " + firstNumber);
-    console.log("Drugi: " + secondNumber);
   });
 });
 
@@ -30,13 +28,43 @@ operator.forEach((oper) => {
 // catching selected operator //
 function catchOperetor(oper) {
   selectedOperator = oper.target.value;
-  console.log(selectedOperator);
 }
 
-function calculate() {}
+function calculate() {
+  let calculateResult = 0;
+  let fNumber = parseFloat(firstNumber);
+  let sNumber = parseFloat(secondNumber);
+  switch (selectedOperator) {
+    case "+":
+      calculateResult = fNumber + sNumber;
+      screen.innerHTML = calculateResult;
+      break;
+    case "-":
+      calculateResult = fNumber - sNumber;
+      screen.innerHTML = calculateResult;
+      break;
+    case "*":
+      calculateResult = fNumber * sNumber;
+      screen.innerHTML = calculateResult;
+      break;
+    case "/":
+      calculateResult = fNumber / sNumber;
+      screen.innerHTML = calculateResult;
+      if (sNumber == 0) {
+        screen.innerHTML = "ERROR";
+      }
+      break;
+  }
+}
 
 let equality = document.getElementById("result");
 
-equality.addEventListener("click", () => {
-  console.log(equality.value);
+equality.addEventListener("click", calculate);
+
+let resetBtn = document.getElementById("reset");
+resetBtn.addEventListener("click", () => {
+  firstNumber = "";
+  secondNumber = "";
+  selectedOperator = null;
+  screen.innerHTML = "0";
 });

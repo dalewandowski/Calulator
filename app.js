@@ -16,6 +16,9 @@ numberBtn.forEach((btn) => {
       secondNumber += btn.value;
       screen.innerHTML = secondNumber;
     }
+
+    console.log("First: ", firstNumber);
+    console.log("Second: ", secondNumber);
   });
 });
 
@@ -28,6 +31,8 @@ operator.forEach((oper) => {
 // catching selected operator //
 function catchOperetor(oper) {
   selectedOperator = oper.target.value;
+
+  console.log("Operator: ", selectedOperator);
 }
 
 function calculate() {
@@ -55,6 +60,12 @@ function calculate() {
       }
       break;
   }
+  if (calculateResult) {
+    firstNumber = calculateResult;
+    secondNumber = "";
+    firstNumber += secondNumber;
+  }
+  console.log("Result: ", calculateResult);
 }
 
 let equality = document.getElementById("result");

@@ -8,7 +8,7 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background: rgb(195, 182, 182);
+  background: #142d4d;
 }
 
 .main-cointainer {
@@ -18,9 +18,9 @@ body {
   height: 350px;
   border-radius: 5px;
   position: relative;
-  box-shadow: 2px 2px 3px 0px rgba(144, 151, 200, 1);
+  box-shadow: 3px 1px 46px 24px rgba(66, 68, 90, 1);
+  opacity: 0.8;
 }
-
 .screen {
   border: 1px solid black;
   background: white;
@@ -76,19 +76,15 @@ body {
   width: 60px;
   height: 38px;
   margin: 5px 15px;
-  background-image: linear-gradient(
-    -60deg,
-    rgb(223, 6, 13),
-    rgb(233, 154, 154),
-    rgb(210, 25, 25)
-  );
+  background: #fba363;
   font-size: 1.5rem;
-  border: outset 3px rgb(54, 2, 2);
+  border: outset 3px rgb(10, 10, 10);
+  border-radius: 4px;
 }
 
 #result {
-  background: linear-gradient(45deg, rgb(107, 78, 30), orange);
-  border: solid 2px orange;
+  background: #fc5c04;
+  border: outset 3px rgb(10, 10, 10);
 }
 
 .operator:hover {
@@ -115,4 +111,17 @@ body {
   left: 45%;
   top: 65px;
   width: 50%;
+}
+
+#reset {
+  position: absolute;
+  width: 20%;
+  left: 5%;
+  background: darkred;
+}
+
+@media (max-width: 380px) {
+  .button-container {
+    width: 80%;
+  }
 }
